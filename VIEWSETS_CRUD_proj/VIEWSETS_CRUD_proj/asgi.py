@@ -1,5 +1,5 @@
 """
-ASGI config for APIMIXIN_proj project.
+ASGI config for VIEWSETS_CRUD_proj project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'APIMIXIN_proj.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'VIEWSETS_CRUD_proj.settings')
 
 application = get_asgi_application()

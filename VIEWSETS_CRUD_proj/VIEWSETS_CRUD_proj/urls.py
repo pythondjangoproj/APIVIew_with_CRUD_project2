@@ -1,4 +1,4 @@
-"""APIMIXIN_proj URL Configuration
+"""VIEWSETS_CRUD_proj URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -15,8 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from testapp import views
+
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+# router.register('api', views.EmployeeCRUDCBV,basename='api')
+router.register('api', views.EmployeeCRUDCBV)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('testapp.urls',namespace='testapp')),
+    path('',include(router.urls)),
 ]
